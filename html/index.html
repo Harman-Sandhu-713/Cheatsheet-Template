@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/css/prism.css">
+        <script src="/javascript/prism.js"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HTML Cheatsheet</title>
+</head>
+
+<body>
+    <nav class="heading">
+        <span class="logo"><img src="/images/copy.png" alt=""></span>
+        <div class="content center">
+            This HTML Cheatsheet is For You!
+        </div>
+    </nav>
+    <div class="sidebar sidebar-go">
+        <nav>
+            <ul>
+                <li><a href="#htmlbp">HTML BoilerPlate</a></li>
+                <li><a href="#var"> Variables</a></li>
+                <li><a href="#op">Operators</a></li>
+                <li><a href="#bop">Bitwise Operators</a> </li>
+                <li><a href="#string">Strings</a> </li>
+                <li><a href="#func">Global Functions</a> </li>
+                <li><a href="#forloop">For Loop</a> </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="container">
+        <ol>
+            <li id="htmlbp"><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt; </code></pre>
+            </li> 
+            <li id="var"><b>Variables:</b> This is the basic javascript variables
+                <pre class="language-js"><code>var a;                          // variable
+var b = "init";                 // string
+var c = "Hi" + " " + "Joe";     // = "Hi Joe"
+var d = 1 + 2 + "3";            // = "33"
+var e = [2,3,5,8];              // array
+var f = false;                  // boolean
+var g = /()/;                   // RegEx
+var h = function(){};           // function object
+const PI = 3.14;                // constant
+var a = 1, b = 2, c = a + b;    // one line
+let z = 'zzz';                  // block scope local variable </code></pre>
+            </li> 
+            <li id="op"><b>Operators:</b> This is the basic javascript operators
+                <pre class="language-js"><code>a = b + c - d;      // addition, substraction
+a = b * (c / d);    // multiplication, division
+x = 100 % 48;       // modulo. 100 / 48 remainder = 4
+a++; b--;           // postfix increment and decrement </code></pre>
+            </li> 
+            <li id="bop"><b>Bitwise Operators:</b> This is the basic javascript Bitwise Operators
+                <pre class="language-js"><code>&	AND 	 5 & 1 (0101 & 0001)	1 (1)
+|	OR 	 5 | 1 (0101 | 0001)	5 (101)
+~	NOT 	 ~ 5 (~0101)	10 (1010)
+^	XOR 	 5 ^ 1 (0101 ^ 0001)	4 (100)
+<<	left shift 	 5 << 1 (0101 << 1)	10 (1010)
+>>	right shift 	 5 >> 1 (0101 >> 1)	2 (10)
+>>>	zero fill right shift 	 5 >>> 1 (0101 >>> 1)	2 (10) </code></pre>
+            </li> 
+            <li id="string"><b>Strings:</b> This is the basic javascript strings code
+                <pre class="language-js"><code>var abc = "abcdefghijklmnopqrstuvwxyz";
+var esc = 'I don\'t \n know';   // \n new line
+var len = abc.length;           // string length
+abc.indexOf("lmno");            // find substring, -1 if doesn't contain 
+abc.lastIndexOf("lmno");        // last occurance
+abc.slice(3, 6);                // cuts out "def", negative values count from behind
+abc.replace("abc","123");       // find and replace, takes regular expressions
+abc.toUpperCase();              // convert to upper case
+abc.toLowerCase();              // convert to lower case
+abc.concat(" ", str2);          // abc + " " + str2
+abc.charAt(2);                  // character at index: "c"
+abc[2];                         // unsafe, abc[2] = "C" doesn't work
+abc.charCodeAt(2);              // character code at index: "c" -> 99
+abc.split(",");                 // splitting a string on commas gives an array
+abc.split("");                  // splitting on characters
+128.toString(16);               // number to hex(16), octal (8) or binary (2) </code></pre>
+            </li> 
+            <li id="func"><b>Global Functions:</b> This is the basic global functions code
+                <pre class="language-js"><code>eval();                     // executes a string as if it was script code
+String(23);                 // return string from number
+(23).toString();            // return string from number
+Number("23");               // return number from string
+decodeURI(enc);             // decode URI. Result: "my page.asp"
+encodeURI(uri);             // encode URI. Result: "my%page.asp"
+decodeURIComponent(enc);    // decode a URI component
+encodeURIComponent(uri);    // encode a URI component
+isFinite();                 // is variable a finite, legal number
+isNaN();                    // is variable an illegal number
+parseFloat();               // returns floating point number of string
+parseInt();                 // parses a string and returns an integer </code></pre>
+            </li> 
+            <li id="forloop"><b>For loop:</b> This is the basic for loop code
+                <pre class="language-js"><code>for (var i = 0; i < 10; i++) {
+document.write(i + ": " + i*3 + "<br />");
+}
+var sum = 0;
+for (var i = 0; i < a.length; i++) {
+sum + = a[i];
+}               // parsing an array
+html = "";
+for (var i of custOrder) {
+html += "<li>" + i + "</li>";
+} </code></pre>
+            </li> 
+            <!-- <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li> 
+            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li> 
+            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li> 
+            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li> 
+            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li> 
+            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li> 
+            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li> 
+            <li><b>HTML Boilerplate:</b> This is the basic html boilerplate code
+                <pre class="language-js"><code>var i = 45; </code></pre>
+            </li>  -->
+        </ol>
+    </div>
+    <script src="/javascript/script.js"></script>
+</body>
+
+</html>
